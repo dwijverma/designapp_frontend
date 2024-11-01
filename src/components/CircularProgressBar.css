@@ -1,0 +1,20 @@
+/* CircularProgressBar.css */
+.circular-progress-bar {
+  /* transform: rotate(-90deg); Rotate to make the progress start from the top */
+}
+
+.circular-progress-background {
+  stroke: #e0e0e0;
+}
+
+.circular-progress-circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.circular-progress-text {
+  font-size: 1.2em;
+  fill: #76c7c0;
+  font-weight: bold;
+}
