@@ -32,7 +32,7 @@ const DesignForm = ({
     console.log(formData);
 
     try {
-      const response = await fetch("http://localhost:5000/critique", {
+      const response = await fetch("https://api.designershangout.com/critique", {
         credentials: "include",
         method: "POST",
         body: formData,

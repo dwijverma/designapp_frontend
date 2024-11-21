@@ -5,10 +5,10 @@ import { UserContext } from "../userContext";
 const Header = () => {
   const navigate = useNavigate();
   const [user] = useContext(UserContext);
-  console.log(user)
+  console.log(user);
 
   const handleLogin = () => {
-    window.location.href = "http://localhost:5000/auth/google";
+    window.location.href = "https://api.designershangout.com/auth/google";
   };
 
   const handleProfile = () => {
@@ -20,7 +20,7 @@ const Header = () => {
       <nav className="flex items-center justify-between p-3 lg:px-8">
         <div className="flex lg:flex-1">
           <h1 className="text-3xl font-bold text-gray-900">
-            DesignersHangout.ai
+            DesignersHangout
           </h1>
         </div>
         <div className="flex lg:flex-1 lg:justify-end">
@@ -30,7 +30,7 @@ const Header = () => {
               className="cursor-pointer flex items-center space-x-2"
             >
               <span className="text-sm font-semibold text-gray-900">
-                {user.displayName}
+                {user.name}
               </span>
             </div>
           ) : (

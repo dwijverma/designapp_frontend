@@ -65,41 +65,9 @@ const ColorPalettes = ({ colorPalettes, collections, setCollections }) => {
     }));
   };
 
-  // // Save data to local storage on changes
-  // useEffect(() => {
-  //   if (collections.length > 0) {
-  //     console.log("setting collection changes in the local storage");
-  //     localStorage.setItem("collections", JSON.stringify(collections));
-  //     const storedCollections = JSON.parse(localStorage.getItem("collections"));
-  //     console.log("to check after the save button - ", storedCollections);
-  //   }
-  // }, [collections]);
-
-  // Handle page unload (user leaves the page)
-  // useEffect(() => {
-  //   const handleBeforeUnload = async () => {
-  //     const storedCollections = JSON.parse(localStorage.getItem("collections"));
-
-  //     if (storedCollections) {
-  //       // Save to backend before the user leaves
-  //       console.log("reached before unload function");
-  //       await saveCollectionsToBackend(storedCollections);
-
-  //       // Clear local storage after saving
-  //       localStorage.removeItem("collections");
-  //     }
-  //   };
-
-  //   window.addEventListener("beforeunload", handleBeforeUnload);
-
-  //   return () => {
-  //     window.removeEventListener("beforeunload", handleBeforeUnload);
-  //   };
-  // }, []);
-
   const saveCollectionsToBackend = async (collections) => {
     try {
-      const response = await fetch(`http://localhost:5000/color-palette/save`, {
+      const response = await fetch(`https://api.designershangout.com/color-palette/save`, {
         credentials: "include",
         method: "POST",
         headers: { "Content-Type": "application/json" },

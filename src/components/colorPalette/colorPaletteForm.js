@@ -7,7 +7,7 @@ const ColorPaletteForm = ({ setColorPalettes, setSubmitted }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/color-palette", {
+      const response = await axios.post("https://api.designershangout.com/color-palette", {
         description,
       });
       setColorPalettes(response.data);

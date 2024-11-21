@@ -9,13 +9,13 @@ const DesignHistory = ({
   setCurrentIndex,
   history,
   setHistory,
-  setButtons
+  setButtons,
 }) => {
   // const [user, setUser] = useContext(UserContext);
 
   const fetchHistory = async () => {
     try {
-      const response = await fetch("http://localhost:5000/critique/history", {
+      const response = await fetch("https://api.designershangout.com/critique/history", {
         credentials: "include",
         method: "GET",
         // body: formData,
@@ -56,7 +56,7 @@ const DesignHistory = ({
   return (
     <div className="mt-6 bg-white rounded-lg shadow-lg p-8 mx-auto max-w-lg">
       <h2 className="text-xl font-bold text-gray-900 mb-4">Project History</h2>
-      <ul className="space-y-2">
+      <ol className="space-y-2 list-decimal">
         {history &&
           history.length > 0 &&
           history.map((project, index) => (
@@ -68,7 +68,7 @@ const DesignHistory = ({
               {project.projectName}
             </li>
           ))}
-      </ul>
+      </ol>
     </div>
   );
 };

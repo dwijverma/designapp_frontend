@@ -12,30 +12,7 @@ const LandingPage = () => {
       <Header />
       
       <section className="px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-5xl font-extrabold text-gray-900 sm:text-6xl">
-              Welcome to DesignersHangout.ai
-            </h1>
-            <p className="mt-6 text-lg text-gray-700">
-              Tired of staring at a blank canvas? DesignersHangout.ai is your
-              AI-powered design assistant, here to spark inspiration, ignite
-              creativity, and empower your design process.
-            </p>
-            <p className="mt-6 text-lg text-gray-700">
-              Brainstorm with AI, get constructive feedback, and elevate your
-              design game with our collaborative tools.
-            </p>
-            <div className="mt-10 flex justify-center">
-              <button
-                onClick={scrollToFeatures}
-                className="rounded-md bg-indigo-600 px-6 py-3 text-lg font-semibold text-white shadow hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600"
-              >
-                Features
-              </button>
-            </div>
-          </div>
-        </div>
+       
 
         <div
           aria-hidden="true"

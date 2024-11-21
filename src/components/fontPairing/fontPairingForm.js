@@ -8,7 +8,7 @@ const FontPairingsForm = ({ setFontPairings }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/generate-fonts",
+        "https://api.designershangout.com/generate-fonts",
         { description }
       );
       setFontPairings(response.data.fonts);

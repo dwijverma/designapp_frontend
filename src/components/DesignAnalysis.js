@@ -202,7 +202,7 @@ function DesignAnalysis({
         </button>
       </form>
       <button
-        className="upload-btn"
+        className="new-btn"
         onClick={() => {
           setSubmitted(false);
         }}

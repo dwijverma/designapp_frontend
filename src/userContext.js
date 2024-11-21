@@ -7,7 +7,7 @@ const UserProvider = ({ children }) => {
 
   // Fetch the user data on component mount (i.e., app load or page refresh)
   useEffect(() => {
-    fetch("http://localhost:5000/auth/user", { credentials: "include" })
+    fetch("https://api.designershangout.com/auth/user", { credentials: "include" })
       .then((response) => response.json())
       .then((data) => {
         if (`${Object.keys(data)[0]}` !== "error") {

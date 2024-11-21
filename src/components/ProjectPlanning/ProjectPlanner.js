@@ -217,7 +217,7 @@ export default function ProjectPlanner() {
 
   description && console.log(description);
   const createPlan = async () => {
-    const response = await axios.post("http://localhost:5000/planning", {
+    const response = await axios.post("https://api.designershangout.com/planning", {
       description,
     });
     let jsonString = response.data;
@@ -251,7 +251,7 @@ export default function ProjectPlanner() {
       return el.data.label;
     });
     const response = await axios.post(
-      "http://localhost:5000/planning/overall-research",
+      "https://api.designershangout.com/planning/overall-research",
       { parameters, description }
     );
     // let jsonString = response.data;
